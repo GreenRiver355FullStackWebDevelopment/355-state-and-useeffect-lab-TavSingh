@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Box, Button } from "@mui/material";
 import Cards from "./components/Cards.jsx";
 
 function App() {
@@ -26,15 +27,16 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Pokémon Explorer</h1>
-      <div className="main-container">
-        <Cards pokemonList={pokemon} />
-          <button onClick={onClickBack} disabled={page === 0}>Back</button>
-          <button onClick={onClickNext}>Next</button>
-      </div>
+  <div className="App">
+    <h1>Pokémon Explorer</h1>
+    <div className="main-container">
+      <Cards pokemonList={pokemon} />
+      <button onClick={onClickBack} disabled={page === 0}>Back</button>
+      <button onClick={onClickNext}>Next</button>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default App;
