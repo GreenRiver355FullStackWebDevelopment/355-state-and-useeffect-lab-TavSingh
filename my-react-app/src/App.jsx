@@ -31,8 +31,10 @@ function App() {
     <h1>Pokémon Explorer</h1>
     <div className="main-container">
       <Cards pokemonList={pokemon} />
-      <button onClick={onClickBack} disabled={page === 0}>Back</button>
-      <button onClick={onClickNext}>Next</button>
+      <div className="nb-button">
+        <button onClick={onClickBack} disabled={page === 0}>Back</button>
+        <button onClick={onClickNext}>Next</button>
+      </div>
     </div>
   </div>
 );
